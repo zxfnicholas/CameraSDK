@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.muzhi.camerasdk.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true" />
+
+    <CheckBox
+        android:id="@+id/select_pic_check"
+        style="@style/SetPicCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:checked="false"
+        android:focusable="false"
+        android:paddingTop="5dip"
+        android:paddingRight="5dip"/>
+
+</com.muzhi.camerasdk.widget.SquareLayout>
