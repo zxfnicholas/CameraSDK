@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="light_gray">#FFA0A0A0</color>
-    <color name="linecolor">#30808080</color>
-    
-    <color name="camerasdk_action_bar">#ff5a5f</color>
-    <color name="camerasdk_action_bar_press">#ffe15d60</color> 
-    
-</resources>
