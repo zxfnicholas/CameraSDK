@@ -11,7 +11,7 @@
 <!-- 相册选取 -->
         <activity android:name="com.muzhi.camerasdk.PhotoPickActivity" />
         <activity android:name="com.muzhi.camerasdk.AlbumActivity" />
-        <activity android:name="com.muzhi.camerasdk.ImageDelActivity" />
+        <activity android:name="com.muzhi.camerasdk.ImageDeleteActivity" />
 3.在主程序中需要调用的的地方添加如下代码：
 Intent intent = new Intent();  
 		            intent.setClassName(getApplication(), "com.muzhi.camerasdk.PhotoPickActivity");  
