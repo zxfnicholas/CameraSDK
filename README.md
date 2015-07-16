@@ -49,11 +49,11 @@ public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 
 二.软件截图：
 -------------
-![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/1.jpg)
-![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/2.jpg)
-![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/3.jpg)
-![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/4.jpg)
-![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/5.jpg)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/1.png)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/2.png)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/3.png)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/4.png)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/5.png)
 
 三.意见反馈：
 -------------
