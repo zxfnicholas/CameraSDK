@@ -57,5 +57,5 @@ public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 
 三.意见反馈：
 -------------
--微博：`http://weibo.com/zengxiaofeng`
+> 微博：[http://www.weibo.com/zengxiaofeng](http://www.weibo.com/zengxiaofeng)  
 
