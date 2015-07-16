@@ -32,7 +32,6 @@ public void openCameraSDKImagePreview(Activity activity,String path,int position
 	intent.putExtra(CommonDefine.EXTRA_POSITION, position);
 	activity.startActivityForResult(intent, CommonDefine.TAKE_PICTURE_PREVIEW);
 }
-	
 //本地相册选择
 public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 	Intent intent = new Intent(); 
@@ -50,15 +49,13 @@ public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 
 二.软件截图：
 -------------
-
-![image](screenshots/1.jpg)
-![image](screenshots/2.jpg)
-![image](screenshots/3.jpg)
-![image](screenshots/4.jpg)
-![image](screenshots/5.jpg)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/1.jpg)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/2.jpg)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/3.jpg)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/4.jpg)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/5.jpg)
 
 三.意见反馈：
 -------------
->微博：`http://weibo.com/zengxiaofeng`
-
+-微博：`http://weibo.com/zengxiaofeng`
 
