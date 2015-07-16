@@ -4,10 +4,11 @@
 一.软件功能：
 -------------
 
-> 1.可以加载手机里面所有的图片
-> 2.也可以根据相册文件夹选择图片
-> 3.可以实时预览已选中的图片
-> 4.可以删除已选择的图片。
+>  - 1.可以加载手机里面所有的图片
+>  - 2.也可以根据相册文件夹选择图片
+>  - 3.可以实时预览已选中的图片
+>  - 4.可以删除已选择的图片。
+
 二.使用方法：
 -------------
 > 1.下载camrasdk并添加到主项目当中.
@@ -47,7 +48,7 @@ public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 }
 ```
 
-二.软件截图：
+三.软件截图：
 -------------
 ![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/1.png)
 ![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/2.png)
@@ -55,7 +56,7 @@ public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 ![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/4.png)
 ![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/5.png)
 
-三.意见反馈：
+四.意见反馈：
 -------------
 > 微博：[http://www.weibo.com/zengxiaofeng](http://www.weibo.com/zengxiaofeng)  
 
