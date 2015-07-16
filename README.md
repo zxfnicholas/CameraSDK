@@ -20,7 +20,7 @@
 <activity android:name="com.muzhi.camerasdk.PreviewActivity" />
 ```
 
-> ３.在主程序中利用如下两个方法调用
+> 3.在主程序中利用如下两个方法调用
 ```   
 //图片预览
 public void openCameraSDKImagePreview(Activity activity,String path,int position) {
