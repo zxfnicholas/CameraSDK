@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- action_bar 的颜色 -->
+    <color name="camerasdk_action_bar">#ff5a5f</color>
+    
+    <!-- action_bar 按钮按下的背景颜色 -->
+    <color name="camerasdk_action_bar_press">#ffe15d60</color>
+    
+</resources>
