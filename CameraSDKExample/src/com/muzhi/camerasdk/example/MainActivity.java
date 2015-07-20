@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     private ArrayList<String> mSelectPath;
     private int maxNum = 9;
 	private boolean showCamera;
-	private boolean selectedMode=true;
+	private boolean sigleMode=false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
                 if(mChoiceMode.getCheckedRadioButtonId() == R.id.single){
-                    selectedMode = false;
+                	sigleMode = true;
                 }
 
                 showCamera = mShowCamera.getCheckedRadioButtonId() == R.id.show;
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                 intent.putExtra(CommonDefine.EXTRA_SHOW_CAMERA, showCamera);// 是否显示拍照按钮
                 intent.putExtra(CommonDefine.EXTRA_SELECT_COUNT_MAX, maxNum); // 最大可选择图片数量
-                intent.putExtra(CommonDefine.EXTRA_SELECT_MODE_SINGLE, selectedMode);// 选择模式(多选)
+                intent.putExtra(CommonDefine.EXTRA_SELECT_MODE_SINGLE, sigleMode);// 是否是单选模式(默认多选)
                 if(mSelectPath != null && mSelectPath.size()>0){
                     intent.putExtra(CommonDefine.EXTRA_IMAGES_LIST, mSelectPath);// 默认选择的图片列表
                 }
