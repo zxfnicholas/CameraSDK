@@ -24,18 +24,15 @@
 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    
 <!-- CameraSDK相册选取相关activity -->
 <activity android:name="com.muzhi.camerasdk.PhotoPickActivity" />
 <activity android:name="com.muzhi.camerasdk.PreviewActivity" />
 <activity android:name="com.muzhi.camerasdk.CropperImageActivity" />
 <activity android:name="com.muzhi.camerasdk.FilterImageActivity" />
-
 ```
 
 > 3.在主程序中利用如下两个方法调用
 ```   
-
 //图片预览
 public void openCameraSDKImagePreview(Activity activity,String path,int position) {
 	Intent intent = new Intent(); 
@@ -44,26 +41,20 @@ public void openCameraSDKImagePreview(Activity activity,String path,int position
 	list.add(path);
 	mCameraSdkParameterInfo.setImage_list(list);
 	mCameraSdkParameterInfo.setPosition(position);
-	
 	Bundle b=new Bundle();
 	b.putSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER, mCameraSdkParameterInfo);
 	intent.putExtras(b);
 	startActivityForResult(intent, CameraSdkParameterInfo.TAKE_PICTURE_PREVIEW);
 }
-
 //本地相册选择
 public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 	Intent intent = new Intent(); 
 	intent.setClassName(activity.getApplication(), "com.muzhi.camerasdk.PhotoPickActivity"); 
 	Bundle b=new Bundle();
-	
 	b.putSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER, mCameraSdkParameterInfo);
 	intent.putExtras(b);
 	startActivityForResult(intent, CameraSdkParameterInfo.TAKE_PICTURE_FROM_GALLERY);
-	
 }
-
-
 ```
 
 三.软件截图：
