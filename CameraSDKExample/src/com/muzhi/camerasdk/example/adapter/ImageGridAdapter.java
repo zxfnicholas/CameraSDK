@@ -87,7 +87,15 @@ public class ImageGridAdapter extends CommonListAdapter<ImageInfo>{
 	            .into(holder.image);
 			}
 			else{
-				holder.image.setImageResource(R.drawable.ic_add_image_button);
+				//holder.image.setImageResource(R.drawable.ic_add_image_button);
+				
+				Picasso.with(mContext)
+	            .load(R.drawable.ic_add_image_button)
+	            .placeholder(R.drawable.camerasdk_pic_loading)
+	            .error(R.drawable.camerasdk_pic_loading)
+	            .resize(90, 90)
+	            .centerCrop()
+	            .into(holder.image);
 			}
 		}
 		

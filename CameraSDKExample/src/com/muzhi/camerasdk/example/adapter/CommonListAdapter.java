@@ -58,13 +58,13 @@ public abstract class CommonListAdapter<T> extends BaseAdapter {
 		this.mList = list;
 		notifyDataSetChanged();
 	}
-	public void setList(T[] list) {
+	/*public void setList(T[] list) {
 		ArrayList<T> arrayList = new ArrayList<T>(list.length);
 		for (T t : list) {
 			arrayList.add(t);
 		}
 		setList(arrayList);
-	}
+	}*/
 	
 	public void addToFirst(List<T> list) {
 		

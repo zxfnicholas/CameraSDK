@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import com.muzhi.camerasdk.example.adapter.ImageGridAdapter;
 import com.muzhi.camerasdk.example.model.ImageInfo;
-import com.muzhi.camerasdk.utils.CommonDefine;
+import com.muzhi.camerasdk.model.CameraSdkParameterInfo;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -28,9 +28,7 @@ public class ResultActivity extends Activity {
 	private GridView noScrollgridview;
 	private ArrayList<ImageInfo> pic_list;
 	private ImageGridAdapter mImageGridAdapter;
-	private int maxImageSize=9;
-	private boolean showCamera=true;
-	private boolean selectedMode=false;
+	private CameraSdkParameterInfo mCameraSdkParameterInfo=new CameraSdkParameterInfo();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,25 +39,26 @@ public class ResultActivity extends Activity {
 		
 		content = (EditText) findViewById(R.id.content);
 		noScrollgridview= (GridView) findViewById(R.id.noScrollgridview);
-		mImageGridAdapter = new ImageGridAdapter(this,maxImageSize);
+		mImageGridAdapter = new ImageGridAdapter(this,mCameraSdkParameterInfo.getMax_image());
 		noScrollgridview.setAdapter(mImageGridAdapter);
 		
 		Bundle b=getIntent().getExtras();
-		maxImageSize=b.getInt("maxImageSize", 9);
-		selectedMode = b.getBoolean(CommonDefine.EXTRA_SELECT_MODE_SINGLE,false);
-		showCamera = b.getBoolean(CommonDefine.EXTRA_SHOW_CAMERA, true);
-		 
-		//getBundle(b);
+		getBundle(b);
+		/*try{
+			mCameraSdkParameterInfo=(CameraSdkParameterInfo)b.getSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER);
+		}
+		catch(Exception e){}*/
 		initEvent();
-		
-		openCameraSDKPhotoPick(this,null);
+		//openCameraSDKPhotoPick(this,null);
 	}
 	
 	
 	private void getBundle(Bundle bundle){
 		if(bundle!=null){
 			pic_list=new ArrayList<ImageInfo>();
-			ArrayList<String> list=(ArrayList<String>) bundle.getSerializable(CommonDefine.EXTRA_IMAGES_LIST);
+			
+			mCameraSdkParameterInfo=(CameraSdkParameterInfo)bundle.getSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER);
+			ArrayList<String> list= mCameraSdkParameterInfo.getImage_list();
 			if(list!=null){
 				for(int i=0;i<list.size();i++){
 					ImageInfo img=new ImageInfo();
@@ -68,7 +67,7 @@ public class ResultActivity extends Activity {
 				}
 				
 			}
-			if(pic_list.size()<maxImageSize){
+			if(pic_list.size()<mCameraSdkParameterInfo.getMax_image()){
 				ImageInfo item=new ImageInfo();
 				item.setAddButton(true);
 				pic_list.add(item);
@@ -102,12 +101,12 @@ public class ResultActivity extends Activity {
 	
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		switch (requestCode) {		
-		case CommonDefine.TAKE_PICTURE_FROM_GALLERY:
+		case CameraSdkParameterInfo.TAKE_PICTURE_FROM_GALLERY:
 			if(data!=null){
 				getBundle(data.getExtras());
 			}
 			break;		
-		case CommonDefine.TAKE_PICTURE_PREVIEW:
+		case CameraSdkParameterInfo.TAKE_PICTURE_PREVIEW:
 			if(data!=null){
 				int position = data.getIntExtra("position", -1);
 				if(position>=0){
@@ -126,23 +125,25 @@ public class ResultActivity extends Activity {
 		intent.setClassName(activity.getApplication(), "com.muzhi.camerasdk.PreviewActivity");  
 		ArrayList<String> list=new ArrayList<String>();
 		list.add(path);
-		intent.putExtra(CommonDefine.EXTRA_IMAGES_LIST, list);// 默认选择的图片列表
-		intent.putExtra(CommonDefine.EXTRA_POSITION, position);
-		activity.startActivityForResult(intent, CommonDefine.TAKE_PICTURE_PREVIEW);
+		mCameraSdkParameterInfo.setImage_list(list);
+		mCameraSdkParameterInfo.setPosition(position);
+		
+		Bundle b=new Bundle();
+		b.putSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER, mCameraSdkParameterInfo);
+		intent.putExtras(b);
+		startActivityForResult(intent, CameraSdkParameterInfo.TAKE_PICTURE_PREVIEW);
 	}
 	
 	//本地相册选择
 	public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 		Intent intent = new Intent(); 
 		intent.setClassName(activity.getApplication(), "com.muzhi.camerasdk.PhotoPickActivity"); 
-		intent.putExtra(CommonDefine.EXTRA_SHOW_CAMERA, showCamera);// 是否显示拍照按钮
-        intent.putExtra(CommonDefine.EXTRA_SELECT_COUNT_MAX, maxImageSize); // 最大可选择图片数量
-        intent.putExtra(CommonDefine.EXTRA_SELECT_MODE_SINGLE, selectedMode);// 选择模式(多选)
-        if(list==null){
-        	list=new ArrayList<String>();
-        }
-        intent.putExtra(CommonDefine.EXTRA_IMAGES_LIST, list);// 默认选择的图片列表
-		startActivityForResult(intent, CommonDefine.TAKE_PICTURE_FROM_GALLERY);
+		Bundle b=new Bundle();
+		
+		b.putSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER, mCameraSdkParameterInfo);
+		intent.putExtras(b);
+		startActivityForResult(intent, CameraSdkParameterInfo.TAKE_PICTURE_FROM_GALLERY);
+		
 	}
 
 	

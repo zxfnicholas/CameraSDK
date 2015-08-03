@@ -7,9 +7,14 @@
     <string name="mode_multi">多选</string>
     <string name="max_select_amount">最多可选</string>
     <string name="hint_default_amount">默认9张</string>
-    <string name="enable_camera">拍照按钮</string>
+    <string name="enable_camera">是否显示拍照按钮</string>
+    <string name="enable_croper">正方型截图</string>
+    <string name="enable_filter">是否使用滤镜</string>
     <string name="enable">显示</string>
     <string name="disable">不显示</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    
     <string name="choose">确定</string>
-
+	
 </resources>

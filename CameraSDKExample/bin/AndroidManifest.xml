@@ -8,7 +8,12 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="22" />
     
- 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+ 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
  	
     <application
         android:allowBackup="true"
@@ -28,9 +33,11 @@
         
         <activity  android:name="com.muzhi.camerasdk.example.ResultActivity" />
             
-        <!-- 相册选取 -->
-        <activity android:name="com.muzhi.camerasdk.PhotoPickActivity" />
-        <activity android:name="com.muzhi.camerasdk.PreviewActivity" />
+        <!-- CameraSDK相册选取 -->
+	    <activity android:name="com.muzhi.camerasdk.PhotoPickActivity" />
+	    <activity android:name="com.muzhi.camerasdk.PreviewActivity" />
+	    <activity android:name="com.muzhi.camerasdk.CropperImageActivity" />
+	    <activity android:name="com.muzhi.camerasdk.FilterImageActivity" />
          
     </application>
 
