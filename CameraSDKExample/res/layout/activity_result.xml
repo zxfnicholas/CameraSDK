@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    
+	<include layout="@layout/camerasdk_actionbar" />
+	
+   <EditText
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:padding="8dip"
+        android:gravity="left|top"
+        android:hint="分享动态..."       
+        android:background="@android:color/white" >
+    </EditText>
+    <View android:layout_width="match_parent" android:layout_height="1px" android:background="#cdcdcd" />
+    <GridView
+        android:padding="5dip" 
+        android:id="@+id/noScrollgridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="5dp" 
+        android:verticalSpacing="5dp"      
+        android:numColumns="4"
+        android:columnWidth="90dip"
+        android:scrollbars="none" 
+        android:listSelector="#00000000"
+        android:cacheColorHint="@android:color/transparent"
+        android:background="@android:color/transparent"/>
+    
+</LinearLayout>
