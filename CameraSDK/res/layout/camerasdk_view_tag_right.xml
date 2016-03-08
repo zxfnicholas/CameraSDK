@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="30.0dip">
+    <FrameLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right">
+        <ImageView
+                android:id="@+id/blackIcon1"
+                android:layout_width="5.3dip"
+                android:layout_height="5.3dip"
+                android:layout_gravity="center"
+                android:src="@drawable/camerasdk_brand_tag_point_black_bg"/>
+        <ImageView
+                android:id="@+id/blackIcon2"
+                android:layout_width="5.3dip"
+                android:layout_height="5.3dip"
+                android:layout_gravity="center"
+                android:src="@drawable/camerasdk_brand_tag_point_black_bg"/>
+        <ImageView
+                android:id="@+id/brandIcon"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_gravity="center"
+                android:src="@drawable/camerasdk_brand_tag_point_white_bg"
+                android:visibility="visible"/>
+        <ImageView
+                android:id="@+id/geoIcon"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_gravity="center"
+                android:src="@drawable/camerasdk_icon_place"
+                android:visibility="visible"/>
+    </FrameLayout>
+
+    <com.muzhi.camerasdk.widget.tag.EmojiconTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="26.0dip"
+            android:background="@drawable/camerasdk_tag_text_bg_right"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="18dp"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="15.0dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="14.0sp" />
+</FrameLayout>

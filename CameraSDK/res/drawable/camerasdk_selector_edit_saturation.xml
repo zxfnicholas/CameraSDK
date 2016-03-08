@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/camerasdk_icon_edit_saturation_pressed" />
+    <item android:state_checked="false"  android:drawable="@drawable/camerasdk_icon_edit_button_saturationnormal" />
+
+</selector>

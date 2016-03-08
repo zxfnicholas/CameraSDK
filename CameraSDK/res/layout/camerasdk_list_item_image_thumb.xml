@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:layout_gravity="center" >
+	
+
+    <ImageView
+	     android:id="@+id/iv_image"
+	     android:layout_width="40dip"
+	     android:layout_height="40dip"
+	     android:contentDescription="@null"
+	     android:scaleType="centerCrop"
+	     android:layout_centerVertical="true"
+	     android:layout_marginLeft="5dip"/>
+
+    <ImageView
+        android:id="@+id/iv_mask"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/camerasdk_image_square_selected"
+        android:visibility="gone"
+        android:layout_marginLeft="5dip"/>
+
+   
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:orientation="vertical"
+    android:background="@color/camerasdk_main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include layout="@layout/camerasdk_actionbar"  />
+    
+    <com.muzhi.camerasdk.view.PagerSlidingTabStrip
+	        android:id="@+id/pager_tab_strip"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp" 
+	        android:background="@android:color/white"	         
+	        app:camerasdk_pstsUnderlineHeight="0.5dip"
+	        app:camerasdk_pstsIndicatorHeight="3.0dip" />
+    
+    <android.support.v4.view.ViewPager
+	        android:id="@+id/main_viewpager"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:clipToPadding="false" /> 
+   
+    
+</LinearLayout>
+
+
