@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    
+    <include layout="@layout/camerasdk_actionbar"/>
+
+    <!-- <ImageView
+        android:id="@+id/iv_camerasdk_preview_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /> -->
+        
+     <!-- <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" /> -->
+     <com.muzhi.camerasdk.view.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+     
+     
+
+</LinearLayout>

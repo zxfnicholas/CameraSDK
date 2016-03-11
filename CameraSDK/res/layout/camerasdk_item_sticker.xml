@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+   <!--  <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" /> -->
+
+    <View 
+        android:id="@+id/left_layout"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true" />
+    
+    <RelativeLayout
+        android:id="@+id/sticker_layout"
+        android:layout_width="70dip"
+        android:layout_height="100dip"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/left_layout"
+        android:background="#3b3f49" >
+
+        <ImageView
+            android:id="@+id/sticker_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <ImageView
+            android:id="@+id/stickerlib_img"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <ProgressBar
+            android:id="@+id/pro_bar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/right_layout"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@+id/sticker_layout"/>
+
+</RelativeLayout>

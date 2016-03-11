@@ -1,0 +1,179 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:orientation="vertical"
+    android:background="@color/camerasdk_main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include layout="@layout/camerasdk_actionbar"  />
+    
+    <com.muzhi.camerasdk.view.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:cropMode="ratio_fit_image"
+        custom:handleColor="@color/camerasdk_handle"
+        custom:guideColor="@color/camerasdk_guide"
+        custom:overlayColor="@color/camerasdk_overlay"
+        custom:frameColor="@color/camerasdk_frame"
+        custom:handleSize="8dp"
+        custom:touchPadding="8dp"
+        custom:handleShowMode="show_always"
+        custom:guideShowMode="show_on_touch"
+        custom:minFrameSize="50dp"
+        custom:frameStrokeWeight="1dp"
+        custom:guideStrokeWeight="1dp" 
+        android:layout_weight="1"/>
+    
+    
+    
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:background="@color/camerasdk_main_tools_bg">
+
+         
+        <RadioGroup
+            android:id="@+id/layout_crop"
+            android:layout_width="match_parent" 
+            android:layout_height="match_parent" 
+            android:orientation="horizontal" 
+            android:layout_gravity="center"
+            android:gravity="center">
+            
+            <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+      		<RadioButton android:id="@+id/button9_16" android:checked="true" style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_nine_sixteen"/>
+      		<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+      		<RadioButton android:id="@+id/button4_3"  style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_four_three"/>
+      		<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+      		<RadioButton android:id="@+id/button1_1"  style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_one_one"/>
+      		<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+      		<RadioButton android:id="@+id/button3_4"  style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_three_four"/>
+     		<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+      		<RadioButton android:id="@+id/button16_9" style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_sixteen_nine"/>
+    		<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+   		</RadioGroup>  
+   
+        <LinearLayout
+            android:id="@+id/layout_rotation" 
+            android:layout_width="match_parent" 
+            android:layout_height="match_parent" 
+            android:orientation="horizontal" 
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone">
+    		<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/ratation_left" style="@style/camerasdk_radio_button" android:src="@drawable/camerasdk_icon_cropper_button_rotation_left_normal"/>
+            <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/ratation_right" style="@style/camerasdk_radio_button" android:src="@drawable/camerasdk_icon_cropper_button_rotation_right_normal"/>
+            <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/ratation_vertical" style="@style/camerasdk_radio_button" android:src="@drawable/camerasdk_icon_cropper_button_left_right_mirror_normal"/>
+            <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/ratation_updown" style="@style/camerasdk_radio_button" android:src="@drawable/camerasdk_icon_cropper_button_up_down_mirror_normal"/>
+            <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+   	</LinearLayout>  
+       
+   </RelativeLayout>
+   
+   <RadioGroup
+       android:id="@+id/layout_tab"
+	   android:layout_width="match_parent"
+	   android:layout_height="@dimen/camerasdk_bootom_tab_height"
+	   android:orientation="horizontal"
+	   android:gravity="center"
+	   android:background="@color/camerasdk_main_bottom_bg">			
+            
+       <RadioButton
+           android:id="@+id/button_crop" 
+           android:checked="true" 
+           style="@style/camerasdk_radio_button" 
+           android:text="裁剪"
+           android:drawableTop="@drawable/camerasdk_selector_cropper_button"/>
+       <RadioButton 
+           android:id="@+id/button_rotation" 
+           style="@style/camerasdk_radio_button" 
+           android:text="旋转"
+           android:drawableTop="@drawable/camerasdk_selector_rotation_button"
+           android:layout_marginLeft="100dip"/>
+
+   </RadioGroup>
+    
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:background="@color/camerasdk_main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include android:id="@+id/layout_top" layout="@layout/camerasdk_actionbar"  />
+
+    
+
+        <LinearLayout
+            android:id="@+id/tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#26252c"
+            android:layout_gravity="center"> 
+
+            <RadioGroup 
+                android:layout_width="match_parent" 
+                android:layout_height="match_parent" 
+                android:orientation="horizontal" 
+                android:layout_gravity="center"
+                android:gravity="center">
+                <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+		        <RadioButton android:id="@+id/button9_16" android:checked="true" style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_nine_sixteen"/>
+		        <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+		        <RadioButton android:id="@+id/button4_3"  style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_four_three"/>
+		        <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+		        <RadioButton android:id="@+id/button1_1"  style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_one_one"/>
+		        <View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+		        <RadioButton android:id="@+id/button3_4"  style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_three_four"/>
+		       	<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+		        <RadioButton android:id="@+id/button16_9" style="@style/camerasdk_radio_button" android:background="@drawable/camerasdk_selector_crop_sixteen_nine"/>
+		      	<View android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+		     </RadioGroup>            
+
+        </LinearLayout> 
+   
+
+    <com.muzhi.camerasdk.view.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_above="@id/tab_bar"
+        android:layout_below="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:cropMode="ratio_fit_image"
+        custom:backgroundColor="#FFFFFB"
+        custom:handleColor="@color/camerasdk_handle"
+        custom:guideColor="@color/camerasdk_guide"
+        custom:overlayColor="@color/camerasdk_overlay"
+        custom:frameColor="@color/camerasdk_frame"
+        custom:handleSize="8dp"
+        custom:touchPadding="8dp"
+        custom:handleShowMode="show_always"
+        custom:guideShowMode="show_on_touch"
+        custom:minFrameSize="50dp"
+        custom:frameStrokeWeight="1dp"
+        custom:guideStrokeWeight="1dp" />
+        
+
+  
+
+</RelativeLayout>
+ -->

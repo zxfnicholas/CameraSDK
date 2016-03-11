@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:orientation="vertical"
+    android:background="@color/camerasdk_main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include layout="@layout/camerasdk_actionbar"  />
+    
+    <ImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal" 
+        android:layout_weight="1"/>
+   
+    
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:background="@color/camerasdk_main_tools_bg"
+        android:gravity="center"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+         
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="fill_parent"  
+        	android:layout_height="wrap_content"
+        	android:max="255"  
+        	android:progress="127"  
+        	android:secondaryProgress="75" 
+        	android:background="@android:color/transparent"
+        	android:thumb="@drawable/camerasdk_icon_seek_thumb"/>
+     
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="fill_parent"  
+        	android:layout_height="wrap_content"
+        	android:max="255"  
+        	android:progress="127"  
+        	android:secondaryProgress="75" 
+        	android:thumb="@drawable/camerasdk_icon_seek_thumb"
+        	android:visibility="gone"/>
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="fill_parent"  
+        	android:layout_height="wrap_content"
+        	android:max="255"  
+        	android:progress="127"  
+        	android:secondaryProgress="75" 
+        	android:thumb="@drawable/camerasdk_icon_seek_thumb"
+        	android:visibility="gone"/>
+       
+   </RelativeLayout>
+   
+   <RadioGroup
+       android:id="@+id/layout_tab"
+	   android:layout_width="match_parent"
+	   android:layout_height="@dimen/camerasdk_bootom_tab_height"
+	   android:orientation="horizontal"
+	   android:gravity="center"
+	   android:background="@color/camerasdk_main_bottom_bg">			
+            
+       <RadioButton
+           android:id="@+id/button_brightness" 
+           android:checked="true" 
+           style="@style/camerasdk_radio_button" 
+           android:text="亮度"
+           android:drawableTop="@drawable/camerasdk_selector_edit_brightness"/>
+       <RadioButton 
+           android:id="@+id/button_contrast" 
+           style="@style/camerasdk_radio_button" 
+           android:text="对比度"
+           android:drawableTop="@drawable/camerasdk_selector_edit_contrast"
+           android:layout_marginLeft="100dip"/>
+       <RadioButton 
+           android:id="@+id/button_saturation" 
+           style="@style/camerasdk_radio_button" 
+           android:text="饱和度"
+           android:drawableTop="@drawable/camerasdk_selector_edit_saturation"
+           android:layout_marginLeft="100dip"/>
+
+   </RadioGroup>
+    
+</LinearLayout>
+
+

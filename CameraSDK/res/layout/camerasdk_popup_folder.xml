@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+   	android:clipToPadding="true"
+    android:background="@android:color/transparent" >
+
+    
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="180dip"
+        android:orientation="vertical" >
+
+        
+       <ListView 
+		    android:id="@+id/lsv_folder"  
+		    android:layout_width="fill_parent"   
+		    android:layout_height="wrap_content"  
+		    android:cacheColorHint="@null"
+	        android:choiceMode="singleChoice"
+	        android:listSelector="@android:color/transparent"
+		    android:background="@android:color/white"
+		    android:numColumns="2"  
+		    android:padding="5dip"
+		    android:verticalSpacing="3dp"  
+		    android:horizontalSpacing="5dp" 
+		    android:stretchMode="columnWidth"  
+		    android:gravity="center"/> 
+        
+		<!-- <View  android:layout_height="1px"/> -->
+		
+    </LinearLayout>
+
+</RelativeLayout>
+
