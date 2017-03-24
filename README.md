@@ -63,6 +63,7 @@ public void openCameraSDKPhotoPick(Activity activity,ArrayList<String> list) {
 ![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/2.png)
 ![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/3.png)
 ![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/4.png)
+![image](https://github.com/zxfnicholas/CameraSDK/blob/master/screenshots/5.png)
 
 四.意见反馈：
 -------------
