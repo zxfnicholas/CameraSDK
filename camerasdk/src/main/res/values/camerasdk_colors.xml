@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- action_bar 的颜色 -->
+    <color name="camerasdk_action_bar">#34343a</color><!-- ff5a5f     -->
+
+    <!-- action_bar 按钮按下的背景颜色 -->
+    <color name="camerasdk_action_bar_press">#ffffff</color>
+    
+    <color name="camerasdk_main_bg">#26252c</color>
+    <color name="camerasdk_main_bottom_bg">#34343a</color>
+    <color name="camerasdk_main_tools_bg">#26252c</color>
+    
+    <!-- 滤镜 -->
+    <color name="camerasdk_filter_tab_selected">#ffededed</color>
+    <color name="camerasdk_filter_tab_unselected">#ffffffff</color>
+     
+    <!-- 所有的边线 -->
+    <color name="camerasdk_divider_color">#cdcdcd</color>
+    <color name="camerasdk_txt_normal">#ffffff</color>
+    <color name="camerasdk_txt_selected">#fcb840</color>
+    
+    
+    <!-- 裁剪线 -->
+    <color name="camerasdk_overlay">#AA1C1C1C</color>
+    <color name="camerasdk_handle">#ec584d</color>
+    <color name="camerasdk_frame">#ec584d</color>
+    <color name="camerasdk_guide">#ec584d</color>
+    
+    
+</resources>

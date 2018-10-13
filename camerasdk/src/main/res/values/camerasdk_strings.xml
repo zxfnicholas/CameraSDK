@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="camerasdk_app_name">camerasdk</string>
+	<string name="camerasdk_album_all">相机胶卷</string>
+	<string name="camerasdk_album">选择相册</string>
+	<string name="camerasdk_album_button">相册</string>
+	<string name="camerasdk_cancel">取消</string>
+	<string name="camerasdk_back">返回</string>
+	<string name="camerasdk_delete">删除</string>
+	<string name="camerasdk_preview_image">图片预览</string>
+	<string name="camerasdk_msg_no_camera">没有系统相机</string>
+    <string name="camerasdk_msg_amount_limit">已经达到最高选择数量</string>
+    <string name="camerasdk_images_building">处理图片</string>
+    
+    <string name="camerasdk_tab_filter">特效</string>
+    <string name="camerasdk_tab_sticker">贴纸</string>
+    <string name="camerasdk_tab_cropper">裁剪</string>
+    <string name="camerasdk_tab_graffiti">涂鸦</string>
+    <string name="camerasdk_tab_enhance">编辑</string>
+    
+</resources>
